@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.both { overflow: hidden; }
+.both:before, .clearfix:after { content: " "; display: block; }
+.both:after { clear: both; }
+li { list-style: none; }
+.floatleft { float: left; }
+/* board table */
+.table {
+	width: 600px;
+	margin: 0 auto;
+}
+.table li {
+	min-width: 100px
+}
