@@ -11,20 +11,12 @@ include_once $root.'/../include/db_host.php';
 ?>
 <!-- borad table -->
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-	if ($_GET['page'] == false) {
-		$page = 1;
-	} else {
-		$page = $_GET['page'];
-	}
-}
-
 $conn = db_connect();
 
 // 게시판 불러오기
-$query = 'SELECT * FROM post';
+$query = 'SELECT * FROM post;';
 $stmt = mysqli_prepare($conn, $query);
-mysqli_stmt_bind_param($stmt, 'i', $board_id);
+// mysqli_stmt_bind_param($stmt, 'i', $board_id);
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt) or die('Database access failed: '.mysqli_error());
 ?>

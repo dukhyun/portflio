@@ -1,14 +1,30 @@
 @charset "UTF-8";
+* { box-sizing: border-box; margin: 0; }
+a { color:#575757; text-decoration:none; outline:0; }
+a:hover { color: blue; }
 .both { overflow: hidden; }
-.both:before, .clearfix:after { content: " "; display: block; }
+.both:before, .both:after { content: " "; display: block; }
 .both:after { clear: both; }
 li { list-style: none; }
 .floatleft { float: left; }
-/* board table */
+.floatright { float: right; }
+/* board.css */
 .table {
 	width: 600px;
 	margin: 0 auto;
 }
 .table li {
 	min-width: 100px
+}
+/* head.css */
+header {
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	padding: 0 40px;
+	background-color: rgba(245,245,245,0.9);
+}
+#navi li {
+	margin-left: 20px;
+	padding: 0 5px;
 }
