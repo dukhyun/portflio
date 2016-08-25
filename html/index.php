@@ -10,7 +10,12 @@ $root = '.';
 include_once $root.'/../include/header.php';
 ?>
 
-<!-- main -->
+<?php
+include_once $root.'/about.php';
+?>
 
+<?php
+include_once $root.'/../include/footer.php';
+?>
 </body>
 </html>

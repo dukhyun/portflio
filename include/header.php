@@ -8,8 +8,8 @@ include_once $root.'/../include/db_host.php';
 	<div id="navi" class="floatright">
 		<ul>
 			<li class="floatleft"><a href="/">about</a></li>
-			<li class="floatleft"><a href="/">sample</a></li>
-			<li class="floatleft"><a href="/">study</a></li>
+			<li class="floatleft"><a href="/sample/">sample</a></li>
+			<li class="floatleft"><a href="/study/">study</a></li>
 		</ul>
 	</div>
 </header>

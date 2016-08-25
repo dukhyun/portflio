@@ -28,3 +28,21 @@ header {
 	margin-left: 20px;
 	padding: 0 5px;
 }
+/* foot.css */
+footer {
+	color: #ccc;
+	width: 100%;
+	padding: 15px;
+	background-color: #555;
+}
+/* about */
+#about {
+	width: 600px;
+	padding: 15px 0;
+	margin: 0 auto;
+}
+#skill {
+	width: 100%;
+	padding: 15px 50px;
+	background-color: #eee;
+}
