@@ -5,7 +5,18 @@
 	<p></p>
 </div>
 <div id="skill">
-	<h3>PHP</h3>
-	<h3>MySQL</h3>
-	<h3>javascript</h3>
+	<ul class="skill both">
+		<li class="floatleft">
+			<h3>PHP</h3>
+			<p class="info">설명</p>
+		</li>
+		<li class="floatleft">
+			<h3>MySQL</h3>
+			<p class="info">설명</p>
+		</li>
+		<li class="floatleft">
+			<h3>javascript</h3>
+			<p class="info">설명</p>
+		</li>
+	</ul>
 </div>
