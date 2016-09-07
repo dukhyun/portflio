@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="prism.css">
 <script src="prism.js"></script>
 <?php
-include_once $root.'/../include/db_host.php';
+include_once $root.'/../include/mysqli_function.php';
 $conn = db_connect();
 
 $select_query = 'SELECT * FROM temp';

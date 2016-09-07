@@ -1,11 +1,12 @@
 @charset "UTF-8";
 * { box-sizing: border-box; margin: 0; }
+html { font-size: 14px; }
 a { color:#575757; text-decoration:none; outline:0; }
 a:hover { color: blue; }
+li { list-style: none; }
 .both { overflow: hidden; }
 .both:before, .both:after { content: " "; display: block; }
 .both:after { clear: both; }
-li { list-style: none; }
 .floatleft { float: left; }
 .floatright { float: right; }
 /* board.css */
@@ -24,9 +25,11 @@ header {
 	padding: 0 40px;
 	background-color: rgba(245,245,245,0.9);
 }
-#navi li {
+/* nav.css */
+#nav li {
 	margin-left: 20px;
 	padding: 0 5px;
+	float: left;
 }
 /* foot.css */
 footer {

@@ -1,15 +1,15 @@
 <!-- header -->
 <?php
-include_once $root.'/../include/db_host.php';
+// include_once $root.'/../include/mysqli_function.php';
 ?>
 
 <header class="both">
 	<div id="title" class="floatleft"><a href="/">my portfolio</a></div>
-	<div id="navi" class="floatright">
+	<nav id="nav" class="floatright">
 		<ul>
-			<li class="floatleft"><a href="/">about</a></li>
-			<li class="floatleft"><a href="/sample/">sample</a></li>
-			<li class="floatleft"><a href="/study/">study</a></li>
+			<li><a href="/">about</a></li>
+			<li><a href="/sample/">sample</a></li>
+			<li><a href="/study/">study</a></li>
 		</ul>
-	</div>
+	</nav>
 </header>
