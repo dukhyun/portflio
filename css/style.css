@@ -9,14 +9,6 @@ li { list-style: none; }
 .both:after { clear: both; }
 .floatleft { float: left; }
 .floatright { float: right; }
-/* board.css */
-.table {
-	width: 600px;
-	margin: 0 auto;
-}
-.table li {
-	min-width: 100px
-}
 /* head.css */
 header {
 	width: 100%;

@@ -2,6 +2,7 @@
 <html>
 <head>
 <style>
+/* board.css */
 .section {
 	width: 600px;
 	margin: 0 auto;
