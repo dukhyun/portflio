@@ -1,6 +1,6 @@
 <!-- include libraries(jQuery, bootstrap) -->
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <!-- include codemirror (codemirror.css, codemirror.js, xml.js, formatting.js) -->
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.css">
@@ -17,11 +17,9 @@
 <script src="js/summernote/plugin/highlight/summernote-ext-highlight.min.js"></script>
 <script>
 $(document).ready(function() {
-	$('#myeditablediv').summernote({
+	$('#summernote').summernote({
 		height: 200,
-		prettifyHtml: false,
 		toolbar: [
-			// Add highlight plugin
 			['style', ['bold', 'italic', 'underline', 'clear']],
 			['fontsize', ['fontsize']],
 			['color', ['color']],
@@ -30,14 +28,39 @@ $(document).ready(function() {
 			['insert', ['picture', 'video']],
 			['view', ['fullscreen', 'codeview']],
 		],
+		onImageUpload: function(files, editor, welEditable) {
+            sendFile(files[0], editor, welEditable);
+        },
 		codemirror: { // codemirror options
 			theme: 'monokai'
 		},
 		lang:'ko-KR'
 	});
+	function sendFile(file, editor, welEditable) {
+		data = new FormData();
+		data.append("file", file);
+		$.ajax({
+			url : "/assets/saveimage.php",
+			data : data,
+			type : "POST",
+			cache : false,
+			contentType : false,
+			processData : false,
+			success : function(data) {
+				editor.insertImage(welEditable, data);
+			}
+		});
+	}
 });
 </script>
 <form action="insert_db.php" method="post">
-	<div id="myeditablediv"></div>
-	<input type="submit" value="작성">
+	<textarea id="summernote" name="myeditablediv"></textarea>
+	<input id="save" type="submit" value="작성">
 </form>
+<script type="text/javascript">
+$(document).ready(function(){
+	var postForm = function() {
+		var content = $('textarea[name="myeditablediv"]').html($('#summernote').code());
+	}
+});
+</script>

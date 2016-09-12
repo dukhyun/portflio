@@ -8,7 +8,7 @@
 <body>
 <?php
 $root = '.';
-include_once $root.'/../include/header.php';
+include_once $root.'/../assets/header.php';
 ?>
 
 <?php
@@ -16,7 +16,7 @@ include_once $root.'/about.php';
 ?>
 
 <?php
-include_once $root.'/../include/footer.php';
+include_once $root.'/../assets/footer.php';
 ?>
 </body>
 </html>
