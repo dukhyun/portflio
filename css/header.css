@@ -1,0 +1,64 @@
+/* head.css */
+#header {
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-moz-justify-content: space-between;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	justify-content: space-between;
+	overflow-y: auto;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	right: 0;
+	width: 23em;
+	height: 100%;
+	background-color: rgba(245,245,245,0.9);
+}
+#header > #title {
+	-moz-flex-shrink: 0;
+	-webkit-flex-shrink: 0;
+	-ms-flex-shrink: 0;
+	flex-shrink: 0;
+	padding: 3em;
+}
+#header > nav {
+	-moz-flex-grow: 1;
+	-webkit-flex-grow: 1;
+	-ms-flex-grow: 1;
+	flex-grow: 1;
+}
+#header > nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#header > nav ul li {
+	border-top: solid 2px #5ccfb0;
+	display: block;
+	padding: 0;
+}
+#header > nav ul li a {
+	-moz-transition: none;
+	-webkit-transition: none;
+	-ms-transition: none;
+	transition: none;
+	border: 0;
+	color: #ffffff !important;
+	display: block;
+	padding: 0.85em 0;
+	text-decoration: none;
+}
+#header > nav ul li a.active {
+	background: #fff;
+	color: #4acaa8 !important;
+}
+#header > nav ul li:first-child {
+	order-top: 0;
+}

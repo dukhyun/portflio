@@ -1,4 +1,3 @@
-<!-- about -->
 <div id="about" class="section">
 	<h2>About Me!</h2>
 	<p>I'm web-programer langue is php, javascript it.</p>
