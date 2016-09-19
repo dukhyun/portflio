@@ -1,12 +1,16 @@
 <?php
+// db connect
 try {
-	$dbhost = 'kocia-postgre-db.cvs0xwx2zhxj.ap-northeast-2.rds.amazonaws.com:5432';
+	$dbhost = 'kocia-postgre-db.cvs0xwx2zhxj.ap-northeast-2.rds.amazonaws.com';
+	$dbport = '5432';
 	$dbuser = 'dukhyun';
 	$dbpass = 'vXnnDbR69jTU3D9E';
 	$dbname = 'portfolio';
 
-	$dbh = new PDO("pgsql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
+	$dbh = new PDO("pgsql:host=$dbhost;port=$dbport;dbname=$dbname;charset=utf8", $dbuser, $dbpass);
+	// error
+	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-	echo "Error : " . $e->getMessage() . "<br>";
+	echo "error: ".$e->getMessage()."<br>";
 	die();
 }
