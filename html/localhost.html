@@ -5,7 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
+<script>
+// delegate event for performance, and save attaching a million events to each anchor
+document.addEventListener('click', function(event) {
+  var target = event.target;
+  if (target.tagName.toLowerCase() == 'a')
+  {
+	  var port = target.getAttribute('href').match(/^:(\d+)(.*)/);
+	  if (port)
+	  {
+		 target.href = port[2];
+		 target.port = port[1];
+	  }
+  }
+}, false);
+</script>
 <section>
 	<h2>Dukhyun AWS sites</h2>
 	<ul>
