@@ -8,16 +8,16 @@
 </head>
 <body>
 <?php
-$root = '.';
-include_once $root.'/../assets/header.php';
+$root_url = '.';
+include_once $root_url.'/../assets/header.php';
 ?>
 
 <?php
-include_once $root.'/about.php';
+include_once $root_url.'/about.php';
 ?>
 
 <?php
-include_once $root.'/../assets/footer.php';
+include_once $root_url.'/../assets/footer.php';
 ?>
 </body>
 </html>
