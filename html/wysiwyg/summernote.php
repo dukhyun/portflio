@@ -28,26 +28,35 @@ $(document).ready(function() {
 			['insert', ['picture', 'video']],
 			['view', ['fullscreen', 'codeview']],
 		],
-		onImageUpload: function(files, editor, welEditable) {
-            sendFile(files[0], editor, welEditable);
-        },
+		// onImageUpload: function(files, editor, welEditable) {
+            // sendFile(files[0], editor, welEditable);
+        // },
+		callbacks: {
+			onImageUpload: function (image) {                            
+				uploadImage(image[0]);
+			}
+		},
 		codemirror: { // codemirror options
 			theme: 'monokai'
 		},
 		lang:'ko-KR'
 	});
-	function sendFile(file, editor, welEditable) {
-		data = new FormData();
+	function uploadImage(file, editor, welEditb) {
+		var data = new FormData();
 		data.append("file", file);
 		$.ajax({
-			url : "/assets/saveimage.php",
-			data : data,
-			type : "POST",
-			cache : false,
-			contentType : false,
-			processData : false,
-			success : function(data) {
-				editor.insertImage(welEditable, data);
+			data: data,
+			type: "post",
+			url: 'saveimage.php',
+			cache: false,
+			contentType: false,
+			processData: false,
+			success: function(data) {
+				var image = $('<img>').attr('src', data);
+				$('#summernote').summernote("insertNode", image[0]);
+			},
+			error: function (data) {
+				console.log(data);
 			}
 		});
 	}

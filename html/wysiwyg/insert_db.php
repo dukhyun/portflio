@@ -7,7 +7,7 @@ if (isset($_POST['myeditablediv'])) {
 	$txt = $_POST['myeditablediv'];
 }
 
-$insert_query = 'INSERT INTO temp (txt) VALUES (?)';
+$insert_query = 'INSERT INTO wysiwyg_test (txt) VALUES (?)';
 $stmt = mysqli_prepare($conn, $insert_query);
 mysqli_stmt_bind_param($stmt, 's', $txt);
 if (!mysqli_stmt_execute($stmt)) {
