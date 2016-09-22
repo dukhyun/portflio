@@ -28,7 +28,7 @@ $(document).ready(function() {
 			['para', ['ul', 'ol', 'paragraph']],
 			['highlight', ['highlight']],
 			['insert', ['picture', 'video', 'link']],
-			['view', ['fullscreen', 'codeview']],
+			['view', ['fullscreen', 'codeview']]
 		],
 		callbacks: {
 			onImageUpload: function (image) {

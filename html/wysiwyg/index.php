@@ -7,9 +7,6 @@
 	width: 800px;
 	margin: 0 auto;
 }
-.view img {
-	width: 100%;
-}
 </style>
 </head>
 <body>
