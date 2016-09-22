@@ -17,7 +17,6 @@
 	<?php
 	$root = '../';
 	// include_once 'tinymce.php';
-	// include_once 'froala.php';
 	include_once 'summernote.php';
 	?>
 
