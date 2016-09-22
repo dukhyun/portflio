@@ -4,8 +4,11 @@
 <style>
 /* board.css */
 .section {
-	width: 600px;
+	width: 800px;
 	margin: 0 auto;
+}
+.view img {
+	width: 100%;
 }
 </style>
 </head>
@@ -18,7 +21,7 @@
 	include_once 'summernote.php';
 	?>
 
-	<div>
+	<div class="view">
 		<?php
 		include_once 'view.php';
 		?>

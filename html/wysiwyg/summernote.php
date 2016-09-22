@@ -20,22 +20,22 @@ $(document).ready(function() {
 	$('#summernote').summernote({
 		height: 200,
 		toolbar: [
-			['style', ['bold', 'italic', 'underline', 'clear']],
+			// ['misc', ['undo','redo']],
+			['fontname', ['fontname']],
 			['fontsize', ['fontsize']],
+			['font', ['bold', 'italic', 'underline', 'clear']],
 			['color', ['color']],
 			['para', ['ul', 'ol', 'paragraph']],
 			['highlight', ['highlight']],
-			['insert', ['picture', 'video']],
+			['insert', ['picture', 'video', 'link']],
 			['view', ['fullscreen', 'codeview']],
 		],
-		// onImageUpload: function(files, editor, welEditable) {
-            // sendFile(files[0], editor, welEditable);
-        // },
 		callbacks: {
-			onImageUpload: function (image) {                            
+			onImageUpload: function (image) {
 				uploadImage(image[0]);
 			}
 		},
+		dialogsFade: true,
 		codemirror: { // codemirror options
 			theme: 'monokai'
 		},
@@ -52,7 +52,10 @@ $(document).ready(function() {
 			contentType: false,
 			processData: false,
 			success: function(data) {
-				var image = $('<img>').attr('src', data);
+				var image = $('<img>').attr({
+					// id: "myImg",
+					src: data
+				});
 				$('#summernote').summernote("insertNode", image[0]);
 			},
 			error: function (data) {
