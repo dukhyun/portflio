@@ -15,6 +15,7 @@
 	$root = '../';
 	// include_once 'tinymce.php';
 	include_once 'summernote.php';
+	// include_once 'trumbowyg.php';
 	?>
 
 	<div class="view">
