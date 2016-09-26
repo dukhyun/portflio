@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="/assets/js/highlight/styles/tomorrow-night.css">
+<link rel="stylesheet" href="/assets/js/highlight/styles/vs.css">
 <script src="/assets/js/highlight/highlight.pack.js"></script>
 <!-- <script src="/assets/js/highlight/highlightjs-line-numbers.js"></script> -->
 <script>
@@ -15,7 +15,7 @@ hljs.initHighlightingOnLoad();
 	white-space: pre-wrap;
 	padding: 0.7em;
 	border: 1px solid #ccc;
-	border-radius: 5px;
+	// border-radius: 5px;
 }
 /* .hljs-line-numbers {
 	text-align: right;
@@ -52,6 +52,26 @@ REFERENCES "forum" ("id");
 -- Initials
 insert into "topic" ("forum_id", "subject")
 values (2, 'D''artagnian');</code></pre>
+
+	<pre><code class="php">&lt;?php
+$numbers = array(1, 2, 3, 5);
+$size = count($numbers); // 배열 원소의 수
+$temp = array();
+$move = 2;
+
+$index = 0;
+while ($index < $size) {
+	if (($index + $move) < $size)
+		$temp[$index + $move] = $numbers[$index];
+	else
+		$temp[$index - ($size - $move)] = $numbers[$index];
+	$index += 1;
+}
+
+$numbers = $temp;
+
+print_r($numbers);
+?&gt;</code></pre>
 </section>
 
 </body>

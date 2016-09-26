@@ -7,6 +7,7 @@ pre.prettyprint {
 	white-space: pre-warp;
 }
 </style>
+<script src="/assets/js/google-code-prun_prettifyrettify/run_prettify.js"></script>
 </head>
 <body>
 <section>
@@ -31,7 +32,6 @@ REFERENCES "forum" ("id");
 -- Initials
 insert into "topic" ("forum_id", "subject")
 values (2, 'D''artagnian');</pre>
-	<script src="/assets/js/google-code-prettify/run_prettify.js"></script>
 </section>
 
 </body>

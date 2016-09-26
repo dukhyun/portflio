@@ -1,6 +1,6 @@
 <?php
 $root = '../';
-include $root.'/../assets/mysqli_function.php';
+include $root.'/../assets/host/mysqli_function.php';
 $conn = db_connect();
 
 if (isset($_POST['myeditablediv'])) {

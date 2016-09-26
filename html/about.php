@@ -7,7 +7,9 @@
 	<ul class="skill both">
 		<li class="floatleft">
 			<h3>PHP</h3>
-			<p class="info">설명</p>
+			<p class="info">
+
+			</p>
 		</li>
 		<li class="floatleft">
 			<h3>MySQL</h3>

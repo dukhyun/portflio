@@ -1,7 +1,12 @@
 <?php
+if (isset($root_path) == false) {
+	$root_path = '.';
+}
+
 // db connect
-function db_connect($root_url) {
-	require $root_url.'/../assets/pgsql_host.php';
+function db_connect($dbname = 'mydb') {
+	global $root_path;
+	require $root_path.'/../assets/host/pgsql_host.php';
 	
 	try {
 		$dbn = 'pgsql:host='.$dbhost.';port='.$dbport.';dbname='.$dbname.';';

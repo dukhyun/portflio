@@ -1,12 +1,10 @@
-<link rel="stylesheet" type="text/css" href="prism.css">
-<script src="prism.js"></script>
 <script>
 // var view = document.getElementsByClassName('view');
 // var img = view.getElementsByTagName('img');
 // alert(img.src);
 </script>
 <?php
-include_once $root.'/../assets/mysqli_function.php';
+include_once $root.'/../assets/host/mysqli_function.php';
 $conn = db_connect();
 
 $select_query = 'SELECT * FROM wysiwyg_test';
