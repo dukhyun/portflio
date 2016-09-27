@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<?php
+$root_path = '../';
+include_once $root_path.'/../assets/meta.php';
+?>
 <link rel="stylesheet" href="/assets/js/highlight/styles.min.css">
 <script src="/assets/js/highlight/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>

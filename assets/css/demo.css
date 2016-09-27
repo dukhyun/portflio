@@ -1,39 +1,24 @@
 @charset "UTF-8";
-.contant {
-	/* border-top: 1px solid #ccc; */
-}
 .contant > .container {
-	width: 740px;
+	width: 750px;
+}
+@media screen and (max-width: 768px) { /* <= 768px */
+	.contant > .container {
+		width: 100%;
+	}
 }
 .user {
-	padding: 20px;
+	padding: 20px 0;
 }
-.user form input {
-	float: left;
-	margin-right: 8px;
-}
-.user form input[type=text] {
-	border: 1px solid #dcdcdc;
-	min-width: 180px;
-	line-height: 28px;
-	padding: 0 8px;
-}
-.user form input[type=submit] {
-	border: 1px solid transparent;
-	border-radius: 2px;
-	padding: 0 8px;
-	min-width: 54px;
-	line-height: 28px;
+/* modal */
+.modal-header, .modal-title, .close {
 	text-align: center;
-	cursor: pointer;
+	font-size: 30px;
 }
-.user form input[value=로그인] {
-	background-color: #65b045;
-	color: #fff;
+#modalLogin .modal-header {
+	background-color: #5cb85c;
+	color: white !important;
 }
-@media screen and (max-width: 740px) {
-	.contant {
-		width: 100%;
-		padding-top: 60px;
-	}
+.modal-title {
+	padding: 15px 25px;
 }

@@ -25,3 +25,6 @@ footer > address {
 }
 footer a { color:#ccc; text-decoration:underline; outline:0; }
 footer a:hover { color: LightSteelBlue; }
+ol, ul {
+	margin-bottom: 0;
+}

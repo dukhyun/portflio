@@ -12,7 +12,7 @@ include_once $root_path.'/../assets/meta.php';
 <?php // navbar
 include_once $root_path.'/../assets/nav.php';
 ?>
-	</header><!-- /container -->
+	</header>
 
 <?php
 include_once $root_path.'/about.php';

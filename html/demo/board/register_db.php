@@ -1,4 +1,6 @@
 <?php // 회원가입
+header("Content-Type:application/json");
+
 $root_path = '../..';
 require_once $root_path.'/../assets/host/pdo_function.php';
 

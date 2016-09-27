@@ -6,7 +6,7 @@ section > header {
 	padding-left: 370px;
 	background-color: rgba(0,0,0,0.05);
 }
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 768px) {
 	section > header {
 		padding: 7em 2em;
 	}

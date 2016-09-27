@@ -20,3 +20,8 @@ function db_connect($dbname = 'mydb') {
 	
 	return $dbh;
 }
+
+function get_($dbh) {
+	$st = $dbh->prepare('SELECT * FROM pulic."Post"');
+	$st->execute();
+}
