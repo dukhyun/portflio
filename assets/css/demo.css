@@ -1,0 +1,39 @@
+@charset "UTF-8";
+.contant {
+	/* border-top: 1px solid #ccc; */
+}
+.contant > .container {
+	width: 740px;
+}
+.user {
+	padding: 20px;
+}
+.user form input {
+	float: left;
+	margin-right: 8px;
+}
+.user form input[type=text] {
+	border: 1px solid #dcdcdc;
+	min-width: 180px;
+	line-height: 28px;
+	padding: 0 8px;
+}
+.user form input[type=submit] {
+	border: 1px solid transparent;
+	border-radius: 2px;
+	padding: 0 8px;
+	min-width: 54px;
+	line-height: 28px;
+	text-align: center;
+	cursor: pointer;
+}
+.user form input[value=로그인] {
+	background-color: #65b045;
+	color: #fff;
+}
+@media screen and (max-width: 740px) {
+	.contant {
+		width: 100%;
+		padding-top: 60px;
+	}
+}

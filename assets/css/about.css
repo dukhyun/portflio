@@ -8,8 +8,7 @@ section > header {
 }
 @media screen and (max-width: 740px) {
 	section > header {
-		width: auto;
-		padding-left: 2em;
+		padding: 7em 2em;
 	}
 }
 section > header h1 {

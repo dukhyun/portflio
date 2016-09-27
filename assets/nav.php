@@ -7,17 +7,24 @@
 					<li>
 						<a class="gn-icon gn-icon-box">Demo</a>
 						<ul class="gn-submenu">
-							<li><a class="gn-icon gn-icon-view">Board</a></li>
-							<li><a class="gn-icon gn-icon-diff">Diff</a></li>
+							<li><a class="gn-icon gn-icon-view" href="/demo/board/">Board</a></li>
+							<li><a class="gn-icon gn-icon-diff" href="/demo/diff/">Diff</a></li>
 						</ul>
 					</li>
-					<li><a class="gn-icon gn-icon-study">Study</a></li>
+					<li><a class="gn-icon gn-icon-note">Study</a></li>
 				</ul>
 			</div><!-- /gn-scroller -->
 		</nav>
 	</li>
 	<!-- <li class="gn-header">Dukhyun Portfolio Site</li> -->
+	<?php
+	if ($root_path !== '.') {
+	?>
+		<li class="gn-header"><a class="gn-icon gn-icon-prev" href="/">Prev</a></li>
+	<?php
+	}
+	?>
 </ul>
 <script src="/assets/js/gnmenu/classie.js"></script>
 <script src="/assets/js/gnmenu/gnmenu.js"></script>
-<script>new gnMenu( document.getElementById( 'gn-menu' ) );</script>
+<script>new gnMenu(document.getElementById('gn-menu'));</script>

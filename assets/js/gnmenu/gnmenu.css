@@ -7,7 +7,7 @@
 .gn-menu-main,
 .gn-menu-main ul {
 	padding: 0;
-	background: white;
+	background-color: rgba(255,255,255,.5);
 	color: #5f6f81;
 	list-style: none;
 	text-transform: none;
@@ -15,11 +15,12 @@
 	line-height: 60px;
 }
 .gn-menu-main {
-	position: fixed;
+	/* position: fixed; */
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 60px;
+	border-bottom: 1px solid #ccc;
 }
 .gn-menu-main a {
 	display: block;
@@ -28,9 +29,9 @@
 	text-decoration: none;
 	cursor: pointer;
 }
-.no-touch .gn-menu-main a:hover,
-.no-touch .gn-menu li.gn-search-item:hover,
-.no-touch .gn-menu li.gn-search-item:hover a {
+.gn-menu-main a:hover,
+.gn-menu li.gn-search-item:hover,
+.gn-menu li.gn-search-item:hover a {
 	background: #5f6f81;
 	color: white;
 }
@@ -38,7 +39,7 @@
 	display: block;
 	float: left;
 	height: 100%;
-	border-right: 1px solid #c6d0da;
+	border-right: 1px solid #ccc;
 	text-align: center;
 }
 .gn-menu-main li.gn-trigger {
@@ -46,10 +47,13 @@
 	width: 60px;
 	user-select: none;
 }
-.gn-menu-main li.gn-header {
+.gn-menu-main li.gn-header a {
 	padding: 0 20px;
 	font-weight: normal;
 	font-size: 18px;
+}
+.gn-header .gn-icon::before {
+	width: 30px;
 }
 .gn-menu-main:after {
 	display: table;
@@ -63,7 +67,7 @@
 	left: 0;
 	overflow: hidden;
 	width: 60px; /* will be transitioned to 340px */
-	border-top: 1px solid #c6d0da;
+	/* border-top: 1px solid #ccc; */
 	background: white;
 	transform: translateX(-60px); /* will be transitioned to 0px */
 	transition: transform 0.3s, width 0.3s;
@@ -75,13 +79,13 @@
 	height: 100%;
 }
 .gn-menu {
-	border-bottom: 1px solid #c6d0da;
+	border-bottom: 1px solid #ccc;
 	text-align: left;
 	font-size: 18px;
 }
 .gn-menu li:not(:first-child),
 .gn-menu li li {
-	box-shadow: inset 0 1px #c6d0da;
+	box-shadow: inset 0 1px #ccc;
 }
 .gn-submenu li {
 	overflow: hidden;
@@ -89,7 +93,7 @@
 	transition: height 0.3s;
 }
 .gn-submenu li a {
-	color: #c1c9d1;
+	color: #b3b3b3;
 }
 input.gn-search {
 	position: relative;
@@ -116,26 +120,26 @@ input.gn-search {
 	color: #5f6f81
 }
 .gn-search:focus::-webkit-input-placeholder,
-.no-touch .gn-menu li.gn-search-item:hover .gn-search:focus::-webkit-input-placeholder {
+.gn-menu li.gn-search-item:hover .gn-search:focus::-webkit-input-placeholder {
 	color: transparent
 }
 
 input.gn-search:focus {
 	cursor: text
 }
-.no-touch .gn-menu li.gn-search-item:hover input.gn-search {
+.gn-menu li.gn-search-item:hover input.gn-search {
 	color: white
 }
-.no-touch .gn-menu li.gn-search-item:hover .gn-search::-webkit-input-placeholder {
+.gn-menu li.gn-search-item:hover .gn-search::-webkit-input-placeholder {
 	color: white
 }
-.no-touch .gn-menu li.gn-search-item:hover .gn-search:-moz-placeholder {
+.gn-menu li.gn-search-item:hover .gn-search:-moz-placeholder {
 	color: white
 }
-.no-touch .gn-menu li.gn-search-item:hover .gn-search::-moz-placeholder {
+.gn-menu li.gn-search-item:hover .gn-search::-moz-placeholder {
 	color: white
 }
-.no-touch .gn-menu li.gn-search-item:hover .gn-search:-ms-input-placeholder {
+.gn-menu li.gn-search-item:hover .gn-search:-ms-input-placeholder {
 	color: white
 }
 .gn-menu-main a.gn-icon-search {
@@ -166,7 +170,7 @@ input.gn-search:focus {
 .gn-icon-box::before {
 	content: "\e01e"
 }
-.gn-icon-study::before {
+.gn-icon-note::before {
 	content: "\e02c"
 }
 .gn-icon-view::before {
@@ -174,6 +178,21 @@ input.gn-search:focus {
 }
 .gn-icon-diff::before {
 	content: "\e01f"
+}
+.gn-icon-prev::before {
+	content: "\e035"
+}
+.gn-icon-edit::before {
+	content: "\e02b"
+}
+.gn-icon-user::before {
+	content: "\e005"
+}
+.gn-icon-adduser::before {
+	content: "\e002"
+}
+.gn-icon-checkuser::before {
+	content: "\e003"
 }
 .gn-icon span {
 	width: 0;
@@ -189,8 +208,8 @@ input.gn-search:focus {
 	box-shadow: 0 3px white, 0 -6px #5f6f81, 0 -9px white, 0 -12px #5f6f81;
 	content: '';
 }
-.no-touch .gn-icon-menu:hover::before,
-.no-touch .gn-icon-menu.gn-selected:hover::before {
+.gn-icon-menu:hover::before,
+.gn-icon-menu.gn-selected:hover::before {
 	background: white;
 	box-shadow: 0 3px #5f6f81, 0 -6px white, 0 -9px #5f6f81, 0 -12px white;
 }

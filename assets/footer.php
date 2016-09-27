@@ -1,5 +1,7 @@
 <footer>
-	<p>(C) 2016 Dukhyun Kim</p>
-	<p>GwangMyeong City, South Korea</p>
-	<p>dackhean@gmail.com</p>
+	<address class="contact">
+		GwangMyeong City<br>South Korea<br>
+		<a href="mailto:dackhean@gmail.com">dackhean@gmail.com</a><br>
+		ⓒ 2016 Dukhyun
+	</address>
 </footer>

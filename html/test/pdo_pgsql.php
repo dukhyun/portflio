@@ -2,16 +2,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 </head>
 <body>
 
 <h1>Demo</h1>
 
 <?php
-$root_url = '..';
-include_once $root_url.'/../assets/db_function.php';
-$dbh = db_connect($root_url);
+$root_path = '..';
+include_once $root_path.'/../assets/host/pdo_function.php';
+$dbh = db_connect('demo');
 
 // $stmt = $dbh->prepare('UPDATE "Status" SET name = :update_name WHERE name = :search_name');
 // $stmt->bindValue(':search_name', 'open');

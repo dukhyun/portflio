@@ -45,7 +45,7 @@ $(document).ready(function() {
 		$.ajax({
 			data: data,
 			type: "post",
-			url: '<?=$root_path?>/../assets/upload_image.php',
+			url: '/assets/upload.php',
 			cache: false,
 			contentType: false,
 			processData: false,
