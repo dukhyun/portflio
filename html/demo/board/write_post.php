@@ -21,7 +21,7 @@ $dbh = db_connect('demo');
 		$user_id = $_SESSION['user_session'];
 	?>
 		<article class="container center">
-			<form method="post" id="post-form" role="form">
+			<form method="post" action="write_db.php" id="post-form" role="form">
 				<div class="form-group">
 					<label class="sr-only" for="select">Category</label>
 					<select class="select form-control" id="select" name="category">

@@ -21,8 +21,8 @@
 				<tr>
 					<td><?php echo $row['id']; ?></td>
 					<td><?php echo $row['category_id']; ?></td>
-					<td><?php echo htmlspecialchars($row['title']); ?></td>
-					<td><?php echo $row['username']; ?></td>
+					<td><?php echo htmlspecialchars($row['subject']); ?></td>
+					<td><?php echo $row['user_id']; ?></td>
 					<td><?php echo $row['create_time']; ?></td>
 				</tr>
 	<?php
