@@ -4,16 +4,16 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
 <!-- include summernote css/js-->
-<link href="js/summernote/summernote.css" rel="stylesheet">
-<script src="js/summernote/summernote.min.js"></script>
+<link href="/assets/js/summernote/summernote.css" rel="stylesheet">
+<script src="/assets/js/summernote/summernote.min.js"></script>
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<script src="js/summernote/lang/summernote-ko-KR.js"></script>
+<script src="/assets/js/summernote/lang/summernote-ko-KR.js"></script>
 <!-- include summernote plugin -->
-<script src="js/summernote/plugin/highlight/summernote-ext-highlight.min.js"></script>
+<script src="/assets/js/summernote/plugin/highlight/summernote-ext-highlight.min.js"></script>
 <script>
 $(document).ready(function() {
 	$('#summernote').summernote({
-		height: 200,
+		height: 400,
 		prettifyHtml: false,
 		toolbar: [
 			// ['misc', ['undo','redo']],

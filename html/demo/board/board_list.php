@@ -34,7 +34,23 @@
 	
 	<div class="both">
 		<form action="write_post.php" method="post">
-			<button type="submit" class="btn btn-default">글쓰기</button>
+			<button type="submit" class="btn btn-default" id="write-submit">글쓰기</button>
 		</form>
+	<?php
+	if (check_login() == false) {
+	?>
+		<script>$("#write-submit").addClass("disabled");</script>
+	<?php
+	}
+	?>
+		<ul class="pagination">
+			<li class="page-item disabled"><a class="page-link" href="#">Prev</a></li>
+			<li class="page-item active"><a class="page-link" href="#">1</a></li>
+			<li class="page-item"><a class="page-link" href="#">2</a></li>
+			<li class="page-item"><a class="page-link" href="#">3</a></li>
+			<li class="page-item"><a class="page-link" href="#">4</a></li>
+			<li class="page-item"><a class="page-link" href="#">5</a></li>
+			<li class="page-item"><a class="page-link" href="#">Next</a></li>
+		</ul>
 	</div>
 </article>

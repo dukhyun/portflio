@@ -24,6 +24,14 @@ $stmt = $dbh->query('SELECT * FROM "Status" ORDER BY id ASC');
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 	echo $row['id'].' '.$row['name'].'<br>';
 }
+
+$rows = get_category_columns($dbh);
+
+print_r($rows);
+echo '<br>';
+foreach ($rows as $row) {
+	echo $row['id'].' '.$row['name'].'<br>';
+}
 ?>
 
 </body>

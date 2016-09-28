@@ -20,30 +20,52 @@ $dbh = db_connect('demo');
 	if (check_login()) {
 		$user_id = $_SESSION['user_session'];
 	?>
-		<form method="post" role="form">
-			<div class="form-group">
-				<label class="control-label " for="select">Select a Choice</label>
-				<select class="select form-control" id="select" name="select">
-					<option value="First Choice">First Choice</option>
-					<option value="Second Choice">Second Choice</option>
-					<option value="Third Choice">Third Choice</option>
-				</select>
+		<article class="container center">
+			<form method="post" id="post-form" role="form">
+				<div class="form-group">
+					<label class="sr-only" for="select">Category</label>
+					<select class="select form-control" id="select" name="category">
+					<?php
+					$rows = get_category_columns($dbh);
+					foreach ($rows as $row) {
+					?>
+						<option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
+					<?php
+					}
+					?>
+					</select>
+				</div>
+				<div class="form-group ">
+					<label class="sr-only" for="subject">Subject</label>
+					<input class="form-control" id="subject" name="subject" type="text" />
+				</div>
+				<div class="form-group ">
+					<label class="sr-only" for="summernote">Text</label>
+					<textarea class="form-control" id="summernote" name="text"></textarea>
+				</div>
+				<?php
+				include_once $root_path.'/../assets/js/summernote/summernote.php';
+				?>
+			</form>
+			<div class="pull-right">
+				<button type="button" class="btn btn-default" id="btn-close">Cencel</button>
+				<button type="submit" class="btn btn-primary" form="post-form" name="submit">Write</button>
+				<script>
+				$("#btn-close").click(function(){
+					if (confirm("글작성을 취소합니까?")) {
+						event.preventDefault();
+						history.back(1);
+					}
+				});
+				</script>
 			</div>
-			<div class="form-group ">
-				<label class="control-label" for="subject">Subject</label>
-				<input class="form-control" id="subject" name="subject" type="text" />
-			</div>
-			<div class="form-group ">
-				<label class="control-label" for="message">Message</label>
-				<textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
-			</div>
-			<div class="form-group">
-				<button class="btn btn-primary " name="submit" type="submit">Submit</button>
-			</div>
-		</form>
 	<?php
+	} else {
+		$prevPage = $_SERVER['HTTP_REFERER'];
+		header('location:'.$prevPage);
 	}
 	?>
+		</article>
 	</section>
 
 </body>

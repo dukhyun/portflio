@@ -22,7 +22,9 @@ function db_connect($dbname = 'mydb') {
 	return $dbh;
 }
 
-function get_($dbh) {
-	$st = $dbh->prepare('SELECT * FROM pulic."Post"');
+function get_category_columns($dbh) {
+	$st = $dbh->prepare('SELECT * FROM public."Category"');
 	$st->execute();
+	
+	return $st->fetchAll(PDO::FETCH_ASSOC);
 }

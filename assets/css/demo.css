@@ -7,8 +7,11 @@
 		width: 100%;
 	}
 }
-.user {
-	padding: 20px 0;
+article:first-child {
+	padding-top: 20px;
+}
+article {
+	padding: 10px 0;
 }
 /* modal */
 .modal-header, .modal-title, .close {
