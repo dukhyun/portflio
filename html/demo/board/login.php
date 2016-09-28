@@ -6,24 +6,28 @@ if (check_login()) {
 	// login start
 ?>
 	<div class="pull-right">
-		<div class="pull-left">
-			<span class="text-info"><a class="gn-icon gn-icon-user"><?php echo $_SESSION['user_email']; ?></a></span>
-		</div>
-		<div class="pull-left">
-			<form action="logout_process.php" method="post">
-				<button type="submit" class="btn btn-danger">로그아웃</button>
-			</form>
-		</div>
+		<button type="button" class="btn btn-link"><?php echo $_SESSION['user_email']; ?></button>
+		<button type="button" class="btn btn-danger" id="logout-submit">로그아웃</button>
 	</div>
+	<script>
+	$("#logout-submit").click(function(){
+		$.ajax({
+			type: 'POST',
+			url: 'logout_process.php',
+			success: function(data){
+				window.location.reload();
+			},
+			error: function (err) {
+				alert(JSON.stringify(err));
+			}
+		});
+	});
+	</script>
 <?php
 	// login end
 } else {
 	// not login start
 ?>
-	<div class="pull-left">
-		<span class="text-muted hidden-xs">demo account: </span>
-		<span class="text-info">demo@email.com / password</span>
-	</div>
 	<div class="pull-right">
 		<!-- Button trigger modal -->
 		<button class="btn btn-success" data-toggle="modal" data-target="#modalLogin">로그인</button>
@@ -50,6 +54,10 @@ if (check_login()) {
 							</div>
 							<button type="submit" class="btn btn-success btn-block" id="login-submit">Sign In</button>
 						</form>
+					</div>
+					<div class="modal-footer bg-info">
+						<span class="text-info">demo@email.com</span> /
+						<span class="text-info">password</span>
 					</div>
 				</div>
 			</div>

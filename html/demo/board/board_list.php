@@ -7,8 +7,8 @@
 		<table class="table table-striped table-bordered table-hover">
 			<thead>
 				<tr>
-					<th class="col-xs-1 col-md-1">#</th>
-					<th class="col-xs-2 col-md-2 hidden-xs">구분</th>
+					<th class="col-xs-1 col-md-1 hidden-xs">#</th>
+					<th class="col-xs-2 col-md-2">구분</th>
 					<th class="col-xs-5 col-md-5">제목</th>
 					<th class="col-xs-2 col-md-2 hidden-xs">글쓴이</th>
 					<th class="col-xs-2 col-md-2 hidden-xs">날짜</th>

@@ -57,8 +57,8 @@ $('document').ready(function () {
 						$("#register-submit").html('Create Account');
 					});
 				} else if (data == "registered") {
-					$("#register-submit").html('<img src="btn-ajax-loader.gif" />&nbsp;Signing Up ...');
-					setTimeout('window.location.reload()', 3000);
+					$("#register-submit").html('Signing Up ...');
+					setTimeout('window.location.reload()', 1000);
 				} else {
 					$("#register-error").fadeIn(1000, function () {
 						$("#register-error").html('<div class="alert alert-danger"><span class="glyphicon glyphicon-info-sign"></span> &nbsp; ' + data + ' !</div>');
@@ -110,8 +110,8 @@ $('document').ready(function () {
 			},
 			success: function (data) {
 				if (data == "ok") {
-					$("#login-submit").html('<img src="btn-ajax-loader.gif" />&nbsp;Signing In ...');
-					setTimeout('window.location.reload()', 3000);
+					$("#login-submit").html('Signing In ...');
+					setTimeout('window.location.reload()', 1000);
 				} else {
 					$("#login-error").fadeIn(1000, function () {
 						$("#login-error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span>&nbsp;' + data + '</div>');

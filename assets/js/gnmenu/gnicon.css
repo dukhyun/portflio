@@ -1,0 +1,35 @@
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'ecoicons';
+	src: url("/assets/fonts/ecoicons/ecoicons.woff") format("woff");
+}
+.gn-icon-search::before { content: "\e001" }
+.gn-icon-user::before { content: "\e002" }
+.gn-icon-th::before { content: "\e003" }
+.gn-icon-th-list::before { content: "\e004" }
+.gn-icon-pencil::before { content: "\e005" }
+.gn-icon-repeat::before { content: "\e007" }
+.gn-icon-refresh::before { content: "\e008" }
+.gn-icon-lock::before { content: "\e00a" }
+.gn-icon-tag::before {  content: "\e00b" }
+.gn-icon-post::before { content: "\e00c" }
+.gn-icon-book::before { content: "\e00d" }
+.gn-icon-bookmark::before { content: "\e00e" }
+.gn-icon-chevron-left::before { content: "\e015" }
+.gn-icon-chevron-right::before { content: "\e016" }
+.gn-icon-arrow-left::before { content: "\e017" }
+.gn-icon-arrow-right::before { content: "\e018" }
+.gn-icon-comment::before { content: "\e019" }
+.gn-icon-thumbs-up::before { content: "\e01b" }
+.gn-icon-thumbs-down::before { content: "\e01c" }
+.gn-icon-paperclip::before { content: "\e01d" }
+.gn-icon-flash::before { content: "\e01e" }
+.gn-icon-menu-hamburger::before { content: "\e01f" }
+.gn-icon-menu-left::before { content: "\e020" }
+.gn-icon-menu-right::before { content: "\e021" }
+.gn-icon-menu-up::before { content: "\e022" }
+.gn-icon-menu-down::before { content: "\e023" }
+.gn-icon-literature::before { content: "\e024" }
+.gn-icon-code::before { content: "\e026" }
+.gn-icon-compare::before { content: "\e027" }

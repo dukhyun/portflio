@@ -1,9 +1,4 @@
-@font-face {
-	font-weight: normal;
-	font-style: normal;
-	font-family: 'ecoicons';
-	src: url("/assets/fonts/ecoicons/ecoicons.woff") format("woff");
-}
+@import url("/assets/js/gnmenu/gnicon.css");
 .gn-menu-main,
 .gn-menu-main ul {
 	padding: 0;
@@ -160,39 +155,6 @@ input.gn-search:focus {
 	line-height: 1;
 	speak: none;
 	-webkit-font-smoothing: antialiased;
-}
-.gn-icon-search::before {
-	content: "\e001"
-}
-.gn-icon-message::before {
-	content: "\e032"
-}
-.gn-icon-box::before {
-	content: "\e01e"
-}
-.gn-icon-note::before {
-	content: "\e02c"
-}
-.gn-icon-view::before {
-	content: "\e010"
-}
-.gn-icon-diff::before {
-	content: "\e01f"
-}
-.gn-icon-prev::before {
-	content: "\e035"
-}
-.gn-icon-edit::before {
-	content: "\e02b"
-}
-.gn-icon-user::before {
-	content: "\e005"
-}
-.gn-icon-adduser::before {
-	content: "\e002"
-}
-.gn-icon-checkuser::before {
-	content: "\e003"
 }
 .gn-icon span {
 	width: 0;
