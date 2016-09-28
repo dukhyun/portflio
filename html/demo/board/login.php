@@ -93,8 +93,11 @@ if (check_login()) {
 							<div class="form-group">
 								<input type="password" class="form-control" id="cpassword" name="cpassword" placeholder="비밀번호 확인">
 							</div>
-							<button type="submit" class="btn btn-primary btn-block" id="register-submit">Create Account</button>
 						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" form="register-form" class="btn btn-primary" id="register-submit">Create Account</button>
 					</div>
 				</div>
 			</div>

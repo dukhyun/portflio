@@ -4,6 +4,42 @@
 	font-family: 'ecoicons';
 	src: url("/assets/fonts/ecoicons/ecoicons.woff") format("woff");
 }
+.gn-icon::before {
+	display: inline-block;
+	width: 60px;
+	text-align: center;
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-family: 'ecoicons';
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+}
+.gn-icon span {
+	width: 0;
+	height: 0;
+	display: block;
+	overflow: hidden;
+}
+.gn-icon-menu::before {
+	vertical-align: -3px;
+	width: 24px;
+	height: 2px;
+	background: #5f6f81;
+	box-shadow: 0 3px white, 0 -6px #5f6f81, 0 -9px white, 0 -12px #5f6f81;
+	content: '';
+}
+.gn-icon-menu:hover::before,
+.gn-icon-menu.gn-selected:hover::before {
+	background: white;
+	box-shadow: 0 3px #5f6f81, 0 -6px white, 0 -9px #5f6f81, 0 -12px white;
+}
+.gn-icon-menu.gn-selected::before {
+	background: #5993cd;
+	box-shadow: 0 3px white, 0 -6px #5993cd, 0 -9px white, 0 -12px #5993cd;
+}
 .gn-icon-search::before { content: "\e001" }
 .gn-icon-user::before { content: "\e002" }
 .gn-icon-th::before { content: "\e003" }
