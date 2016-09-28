@@ -12,8 +12,7 @@
 	font-weight: normal;
 	font-style: normal;
 	font-variant: normal;
-	font-family: 'ecoicons';
-	line-height: 1;
+	font-family: 'ecoicons' !important;
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 }

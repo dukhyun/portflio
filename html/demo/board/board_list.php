@@ -33,7 +33,7 @@
 	</div>
 	
 	<div class="both">
-		<form action="write.php" method="post">
+		<form action="write_post.php" method="post">
 			<button type="submit" class="btn btn-default">글쓰기</button>
 		</form>
 	</div>
