@@ -9,6 +9,7 @@
 }
 .user {
 	padding: 20px 0;
+	line-height: 34px;
 }
 /* modal */
 .modal-header, .modal-title, .close {

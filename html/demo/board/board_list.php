@@ -8,10 +8,10 @@
 			<thead>
 				<tr>
 					<th class="col-xs-1 col-md-1">#</th>
-					<th class="col-xs-2 col-md-2">구분</th>
+					<th class="col-xs-2 col-md-2 hidden-xs">구분</th>
 					<th class="col-xs-5 col-md-5">제목</th>
-					<th class="col-xs-2 col-md-2">글쓴이</th>
-					<th class="col-xs-2 col-md-2">날짜</th>
+					<th class="col-xs-2 col-md-2 hidden-xs">글쓴이</th>
+					<th class="col-xs-2 col-md-2 hidden-xs">날짜</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -22,7 +22,7 @@
 					<td><?php echo $row['id']; ?></td>
 					<td><?php echo $row['category_id']; ?></td>
 					<td><?php echo htmlspecialchars($row['title']); ?></td>
-					<td><?php echo $row['user_id']; ?></td>
+					<td><?php echo $row['username']; ?></td>
 					<td><?php echo $row['create_time']; ?></td>
 				</tr>
 	<?php

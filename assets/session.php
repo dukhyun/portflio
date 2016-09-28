@@ -5,7 +5,6 @@ function start_session() {
 	$httponly = true;
 	
 	if (ini_set('session.use_only_cookies', 1) === false) {
-		header("Location: error.php?error_code=2");
 		exit();
 	}
 	
@@ -30,12 +29,19 @@ function destroy_session() {
 	session_destroy();
 }
 
-function try_to_login($id, $password, $dbname = 'mydb') {
-	if (check_user_account($id, $password, $dbname)) {
-		$_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
-		$_SESSION['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
-		$_SESSION['id'] = $id;
-		$_SESSION['password'] = $password;
+function try_to_login($email, $password, $dbname = 'mydb') {
+	$dbh = db_connect($dbname);
+	$stmt = $dbh->prepare('SELECT * FROM public."User" WHERE email=:email');
+	$stmt->bindParam(':email', $email);
+	$stmt->execute();
+	$row = $stmt->fetch(PDO::FETCH_ASSOC);
+	$pw_hash = $row['pw_hash'];
+	
+	if (password_verify($password, $pw_hash)) {
+		// $_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
+		// $_SESSION['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
+		$_SESSION['user_session'] = $row['id'];
+		$_SESSION['user_email'] = $row['email'];
 		$_SESSION['login_status'] = true;
 		return true;
 	} else {
@@ -43,29 +49,16 @@ function try_to_login($id, $password, $dbname = 'mydb') {
 	}
 }
 
-function check_user_account($id, $password, $dbname = 'mydb') {
-	$dbh = db_connect($dbname);
-	$stmt = $dbh->prepare('SELECT pw_hash FROM public."user" WHERE email=:email AND enabled=:enabled');
-	$stmt->bindParam(':email', $id);
-	$stmt->bindValue(':enabled', 'true');
-	$stmt->execute();
-	$result = $stmt->fetch(PDO::FETCH_ASSOC);
-	$pw_hash = $row['pw_hash'];
-	return password_verify($password, $pw_hash);
-	$stmt = NULL;
-	$dbh = NULL;
-}
-
 function try_to_logout() {
 	if (check_login()) {
 		$_SESSION['login_status'] = false;
-	} else {
 	}
 }
 
 function check_login() {
-	return isset($_SESSION['ip'], $_SESSION['user_agent'], $_SESSION['login_status']) && 
-		$_SESSION['ip'] == $_SERVER['REMOTE_ADDR'] && 
-		$_SESSION['user_agent'] == $_SERVER['HTTP_USER_AGENT'] &&
-		$_SESSION['login_status'];
+	return isset($_SESSION['user_session']) && $_SESSION['login_status'];
+	// return isset($_SESSION['ip'], $_SESSION['user_agent'], $_SESSION['login_status']) && 
+		// $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'] && 
+		// $_SESSION['user_agent'] == $_SERVER['HTTP_USER_AGENT'] &&
+		// $_SESSION['login_status'];
 }

@@ -15,8 +15,7 @@ require_once $root_path.'/../assets/host/pdo_function.php';
 $dbh = db_connect('demo');
 ?>
 	<section class="contant">
-	<?php // login form
-	start_session();
+	<?php
 	require_once 'login.php';
 	require_once 'board_list.php';
 	?>

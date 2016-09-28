@@ -9,7 +9,8 @@ function db_connect($dbname = 'mydb') {
 	require $root_path.'/../assets/host/pgsql_host.php';
 	
 	try {
-		$dbn = 'pgsql:host='.$dbhost.';port='.$dbport.';dbname='.$dbname.';';
+		$dbn = "pgsql:host={$dbhost};port={$dbport};dbname={$dbname};";
+		// $dbn = 'pgsql:host='.$dbhost.';port='.$dbport.';dbname='.$dbname.';';
 		$dbh = new PDO($dbn, $dbuser, $dbpass);
 		// error code display
 		$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
