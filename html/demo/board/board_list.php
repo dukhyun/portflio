@@ -19,11 +19,21 @@
 	while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 	?>
 				<tr>
-					<td><?php echo $row['id']; ?></td>
-					<td><?php echo $row['category_id']; ?></td>
-					<td><?php echo htmlspecialchars($row['subject']); ?></td>
-					<td><?php echo $row['user_id']; ?></td>
-					<td><?php echo $row['create_time']; ?></td>
+					<td class="hidden-xs"><?php echo $row['id']; ?></td>
+					<td class=""><?php echo $row['category_id']; ?></td>
+					<td class=""><?php echo htmlspecialchars($row['subject']); ?></td>
+					<td class="hidden-xs"><?php echo $row['user_id']; ?></td>
+					<td class="hidden-xs">
+					<?php
+					$post_date = new DateTime($row['create_time']);
+					$now_date = new DateTime();
+					$diff = $post_date->diff($now_date);
+					if ($diff->y > 0) {
+					} else if ($diff->days > 0) {
+					} else {
+					}
+					?>
+					</td>
 				</tr>
 	<?php
 	}

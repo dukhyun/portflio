@@ -28,3 +28,18 @@ function get_category_columns($dbh) {
 	
 	return $st->fetchAll(PDO::FETCH_ASSOC);
 }
+
+function get_post_columns($dbh) {
+	$query = 'SELECT id, subject, text, username, category FROM public."Post"
+				WHERE id = :id';
+	$stmt = $dbh->prepare($query);
+	$stmt->execute();
+	
+	return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function view_time($timestamp, $format = DATE_ATOM) {
+	// date_default_timezone_set("Asia/Seoul");
+	$timestamp = strtotime($timestamp);
+	echo date($format, $timestamp);
+}
