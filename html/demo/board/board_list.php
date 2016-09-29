@@ -29,8 +29,11 @@
 					$now_date = new DateTime();
 					$diff = $post_date->diff($now_date);
 					if ($diff->y > 0) {
+						view_time($post_date->format('Y-m-d H:i:s e'), 'Y-m-d');
 					} else if ($diff->days > 0) {
+						view_time($post_date->format('Y-m-d H:i:s e'), 'm-d');
 					} else {
+						view_time($post_date->format('Y-m-d H:i:s e'), 'H:i');
 					}
 					?>
 					</td>

@@ -2,7 +2,7 @@
 	font-weight: normal;
 	font-style: normal;
 	font-family: 'ecoicons';
-	src: url("/assets/fonts/ecoicons/ecoicons.woff") format("woff");
+	src: url('/assets/fonts/ecoicons/ecoicons.woff') format('woff');
 }
 .gn-icon::before {
 	display: inline-block;
@@ -12,7 +12,7 @@
 	font-weight: normal;
 	font-style: normal;
 	font-variant: normal;
-	font-family: 'ecoicons' !important;
+	font-family: 'ecoicons';
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 }

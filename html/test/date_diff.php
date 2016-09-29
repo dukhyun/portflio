@@ -35,6 +35,8 @@ if ($diff->days > 0) {
 	echo '1년 이상';
 }
 echo '<br>';
+print_r($old);
+echo '<br>';
 // date_default_timezone_set("UTC");
 view_time($now->format('Y-m-d H:i:s e'), 'U = Y-m-d H:i:sP');
 ?>

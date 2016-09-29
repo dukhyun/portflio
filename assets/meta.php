@@ -8,4 +8,6 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 <!-- include stylesheet(gn-menu) -->
 <link rel="stylesheet" type="text/css" href="/assets/js/gnmenu/gnmenu.css">
+<link rel="stylesheet" type="text/css" href="/assets/js/gnmenu/gnicon.css">
+<!-- include my custom stylesheet -->
 <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
