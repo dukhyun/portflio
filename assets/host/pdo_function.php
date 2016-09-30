@@ -29,14 +29,18 @@ function get_category_columns($dbh) {
 	return $st->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function get_post_columns($dbh, $id) {
+function get_post_columns($dbh, $id = NULL) {
 	$query = 'SELECT post.id, subject, text, create_time, update_time,
-				us.username, category.name AS category FROM "Post" AS post
+				us.email, us.username, category.name AS category FROM "Post" AS post
 				LEFT JOIN "User" AS us ON post.user_id = us.id
-				LEFT JOIN "Category" AS category ON post.category_id = category.id
-				WHERE post.id = :id';
+				LEFT JOIN "Category" AS category ON post.category_id = category.id';
+	if (isset($id)) {
+		$query .= ' WHERE post.id = :id';
+	}
 	$stmt = $dbh->prepare($query);
-	$stmt->bindParam(':id', $id);
+	if (isset($id)) {
+		$stmt->bindParam(':id', $id);
+	}
 	$stmt->execute();
 	
 	return $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -8,11 +8,10 @@ include_once $root_path.'/../assets/meta.php';
 <link rel="stylesheet" type="text/css" href="/assets/css/about.css">
 </head>
 <body>
-	<header>
+	
 <?php // navbar
 include_once $root_path.'/../assets/nav.php';
 ?>
-	</header>
 
 <?php
 include_once $root_path.'/about.php';

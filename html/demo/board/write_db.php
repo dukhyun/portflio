@@ -35,4 +35,4 @@ if ($stmt->execute()) {
 }
 $stmt = NULL;
 $dbh = NULL;
-header('location: /');
+header('location: ./');
