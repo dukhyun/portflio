@@ -1,4 +1,4 @@
 <IfModule mod_rewrite.c>
 	RewriteEngine On
-	RewriteRule /demo/board/([\w]+)(.)$ /demo/board/view_post.php?$1=$2 [L]
+	RewriteRule /demo/board/([\w]+)/(.+)$ /demo/board/view_post.php?$1_id=$2 [L]
 </IfModule>
