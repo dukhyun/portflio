@@ -19,8 +19,8 @@
 	?>
 				<tr>
 					<td class="hidden-xs"><?php echo $row['id']; ?></td>
-					<td class=""><?php echo $row['category']; ?></td>
-					<td class="">
+					<td class="category"><?php echo $row['category']; ?></td>
+					<td class="subject">
 						<span onclick="viewPost(<?php echo $row['id']; ?>)"><?php echo htmlspecialchars($row['subject']); ?></span>
 					</td>
 					<td class="hidden-xs"><?php echo $row['username']; ?></td>

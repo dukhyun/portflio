@@ -40,7 +40,7 @@ $dbh = db_connect('demo');
 				<hr>
 				<?php echo $row['text']; ?>
 				<hr>
-				<!-- the comment box -->
+				<!-- the comment editer box -->
 				<div class="well">
                     <h4>Leave a Comment:</h4>
                     <form role="form">

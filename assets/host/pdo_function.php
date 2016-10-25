@@ -37,6 +37,7 @@ function get_post_columns($dbh, $id = NULL) {
 	if (isset($id)) {
 		$query .= ' WHERE post.id = :id';
 	}
+	$query .= ' ORDER BY post.id DESC';
 	$stmt = $dbh->prepare($query);
 	if (isset($id)) {
 		$stmt->bindParam(':id', $id);

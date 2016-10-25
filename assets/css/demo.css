@@ -25,3 +25,7 @@ article {
 .modal-title {
 	padding: 15px 25px;
 }
+/* board list */
+.subject span:hover {
+	cursor: pointer;
+}

@@ -1,4 +1,4 @@
-<?php // 회원가입
+<?php // 글 작성
 // header("Content-Type:application/json");
 
 $root_path = '../..';
@@ -8,13 +8,14 @@ require_once $root_path.'/../assets/host/pdo_function.php';
 start_session();
 if (check_login() == false) {
 	echo '<script>history.back(2);</script>';
+} else {
+	$user_id = $_SESSION['user_session'];
 }
 
 if (isset($_POST['category'], $_POST['subject'], $_POST['text'])) {
 	$category_id = $_POST['category'];
 	$subject = $_POST['subject'];
 	$text = $_POST['text'];
-	$user_id = $_SESSION['user_session'];
 } else {
 	echo 'POST does not exist.';
 }
