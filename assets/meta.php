@@ -3,13 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dukhyun Portfolio Site</title>
 <!-- https -->
-<script type="text/javascript">
-if (documnet.location.host !== 'localhost' || documnet.location.host !== 'pf.dukhyun') {
-	if (document.location.protocol == 'http:') {
-		document.location.href = document.location.href.replace('http:', 'https:');
-	}
-}
-</script>
+<script type="text/javascript" src="/asset/js/https.js"></script>
 <!-- include libraries(jQuery, bootstrap) -->
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
